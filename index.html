@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Konuşma Sınavı – Destek</title>
+  <style>
+    :root {
+      --blue: #0077FF;
+      --blue-dark: #1449D1;
+      --bg: #f2f2f7;
+      --card: #ffffff;
+      --text: #1c1c1e;
+      --text-secondary: #6c6c72;
+      --border: #e5e5ea;
+      --hero-from: #0077FF;
+      --hero-to: #1449D1;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141416;
+        --card: #1c1c1e;
+        --text: #f2f2f7;
+        --text-secondary: #98989f;
+        --border: #2c2c2e;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(145deg, var(--hero-from), var(--hero-to));
+      padding: 64px 24px 80px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero-icon {
+      width: 100px;
+      height: 100px;
+      border-radius: 22px;
+      margin: 0 auto 20px;
+      display: block;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+    }
+
+    .hero h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      opacity: 0.85;
+      max-width: 500px;
+      margin: 0 auto 20px;
+    }
+
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      backdrop-filter: blur(4px);
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    /* SECTION TITLE */
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--blue);
+      margin-bottom: 10px;
+      padding-left: 4px;
+    }
+
+    /* CARD */
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 32px;
+      border: 1px solid var(--border);
+    }
+
+    /* FEATURES GRID */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .feature-item {
+      background: var(--card);
+      padding: 18px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .feature-icon {
+      font-size: 24px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .feature-item h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+      color: var(--text);
+    }
+
+    .feature-item p {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    /* FAQ */
+    .faq-item {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-item h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: var(--text);
+    }
+
+    .faq-item p {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    /* CONTACT */
+    .contact-row {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      border-bottom: 1px solid var(--border);
+      gap: 14px;
+      text-decoration: none;
+      color: var(--text);
+      transition: background 0.15s;
+    }
+
+    .contact-row:last-child {
+      border-bottom: none;
+    }
+
+    .contact-row:hover {
+      background: var(--bg);
+    }
+
+    .contact-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .contact-icon.blue  { background: #0077FF20; }
+    .contact-icon.green { background: #34c75920; }
+
+    .contact-row-text h3 {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .contact-row-text p {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .contact-row .arrow {
+      margin-left: auto;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    /* PRIVACY */
+    .privacy-block {
+      padding: 20px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .privacy-block strong {
+      color: var(--text);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 500px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <img class="hero-icon" src="icon.png" alt="Konuşma Sınavı" />
+    <h1>Konuşma Sınavı</h1>
+    <p>MEB'e uygun konuşma sınavı değerlendirme uygulaması</p>
+    <div class="hero-badges">
+      <span class="badge">Ücretsiz</span>
+      <span class="badge">Reklamsız</span>
+      <span class="badge">Çevrimdışı</span>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- ÖZELLIKLER -->
+    <div class="section-label">Özellikler</div>
+    <div class="card">
+      <div class="features-grid">
+
+        <div class="feature-item">
+          <div class="feature-icon">📋</div>
+          <div>
+            <h3>MEB Uyumlu Ölçekler</h3>
+            <p>Hazırlıklı Konuşma, Sunum ve Performans Görevi ölçekleri</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🏫</div>
+          <div>
+            <h3>e-Okul Entegrasyonu</h3>
+            <p>Öğrenci listelerini e-Okul'dan kopyalayıp aktarın</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">📊</div>
+          <div>
+            <h3>Raporlama</h3>
+            <p>Excel, PDF, PNG veya ZIP formatında çıktı alın</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">📈</div>
+          <div>
+            <h3>İstatistikler</h3>
+            <p>Puan dağılımı, dönem trendi ve ölçüt karşılaştırması</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🎲</div>
+          <div>
+            <h3>Rastgele Seçici</h3>
+            <p>Tarafsız değerlendirme için rastgele öğrenci çekme</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🗂️</div>
+          <div>
+            <h3>Devamsızlık Takibi</h3>
+            <p>Girmeyen ve sürekli devamsız öğrencileri belirleyin</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">💬</div>
+          <div>
+            <h3>Sınav Konuları</h3>
+            <p>Konuları belirleyin, sınıf gruplarınızla paylaşın</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🔒</div>
+          <div>
+            <h3>Uygulama Kilidi</h3>
+            <p>Yüz Tanıma veya Parmak İzi ile güvenli erişim</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SSS -->
+    <div class="section-label">Sık Sorulan Sorular</div>
+    <div class="card">
+
+      <div class="faq-item">
+        <h3>Uygulama ücretli mi?</h3>
+        <p>Hayır. Tamamen ücretsizdir ve hiçbir reklam içermez.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>İnternet bağlantısı gerekiyor mu?</h3>
+        <p>Hayır. Uygulama tamamen çevrimdışı çalışır.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Hangi dersler destekleniyor?</h3>
+        <p>Türkçe, Türk Dili ve Edebiyatı ile İngilizce dersleri desteklenmektedir.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Öğrenci listesini nasıl aktarabilirim?</h3>
+        <p>e-Okul'daki not girişi ekranından öğrenci listesini kopyalayıp uygulamaya yapıştırabilirsiniz.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Verilerimi yedekleyebilir miyim?</h3>
+        <p>Evet. Ayarlar bölümünden tüm verilerinizi şifreli ZIP formatında yedekleyip geri yükleyebilirsiniz.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>G statüsü öğrenciler için destek var mı?</h3>
+        <p>Evet. Özel eğitim gerektiren öğrenciler ayrıca takip edilebilir ve raporlanabilir.</p>
+      </div>
+
+    </div>
+
+    <!-- İLETİŞİM -->
+    <div class="section-label">İletişim</div>
+    <div class="card">
+
+      <a class="contact-row" href="mailto:dalgalicemal@gmail.com">
+        <div class="contact-icon blue">✉️</div>
+        <div class="contact-row-text">
+          <h3>E-posta Gönder</h3>
+          <p>dalgalicemal@gmail.com</p>
+        </div>
+        <span class="arrow">›</span>
+      </a>
+
+      <div class="contact-row">
+        <div class="contact-icon green">📱</div>
+        <div class="contact-row-text">
+          <h3>Uygulama İçi Geri Bildirim</h3>
+          <p>Ayarlar → İletişim & Geri Bildirim</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- GİZLİLİK -->
+    <div class="section-label">Gizlilik</div>
+    <div class="card">
+      <div class="privacy-block">
+        <p>
+          Tüm öğrenci bilgileri, sınıf listeleri ve değerlendirme sonuçları
+          <strong>yalnızca cihazınızda saklanır</strong>. Hiçbir veri sunucularımıza
+          gönderilmez. Geri bildirim formu dışında üçüncü taraflarla veri paylaşımı yapılmaz.
+        </p>
+        <br />
+        <p>Son güncelleme: Şubat 2026 &nbsp;·&nbsp; İletişim: dalgalicemal@gmail.com</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 Cemal Dalgalı · Konuşma Sınavı v1.0
+  </footer>
+
+</body>
+</html>
