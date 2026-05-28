@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Konuşma Sınavı – Destek</title>
+  <meta
+    name="description"
+    content="Konuşma Sınavı destek sayfası. Türkçe konuşma sınavı, edebiyat konuşma sınavı, İngilizce konuşma sınavı, konuşma sınavı ölçeği ve MEB'e uygun değerlendirme uygulaması için kullanım akışı, Not Listesi, iCloud senkronizasyonu, dışa aktarma ve iletişim bilgileri."
+  />
+  <meta
+    name="keywords"
+    content="konuşma sınavı, konuşma sınavı ölçeği, Türkçe konuşma sınavı, edebiyat konuşma sınavı, Türk Dili ve Edebiyatı konuşma sınavı, İngilizce konuşma sınavı, MEB konuşma sınavı, konuşma sınavı değerlendirme ölçeği, konuşma sınavı rubriği, e-Okul not girişi, öğretmen uygulaması"
+  />
+  <link rel="canonical" href="https://dalgali.github.io/konusmasinavi/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="application-name" content="Konuşma Sınavı" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dalgali.github.io/konusmasinavi/" />
+  <meta property="og:title" content="Konuşma Sınavı – Destek" />
+  <meta
+    property="og:description"
+    content="Türkçe, Türk Dili ve Edebiyatı ve İngilizce dersleri için konuşma sınavı ölçeği, değerlendirme, Not Listesi, iCloud senkronizasyonu ve kullanım bilgileri."
+  />
+  <meta
+    property="og:image"
+    content="https://dalgali.github.io/konusmasinavi/icon.png"
+  />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:url" content="https://dalgali.github.io/konusmasinavi/" />
+  <meta name="twitter:title" content="Konuşma Sınavı – Destek" />
+  <meta
+    name="twitter:description"
+    content="Konuşma Sınavı uygulamasının destek sayfası: konuşma sınavı ölçeği, Türkçe, Edebiyat ve İngilizce değerlendirme, iCloud senkronizasyonu ve iletişim bilgileri."
+  />
+  <style>
+    :root {
+      --blue: #0077FF;
+      --blue-dark: #1449D1;
+      --bg: #f2f2f7;
+      --card: #ffffff;
+      --text: #1c1c1e;
+      --text-secondary: #6c6c72;
+      --border: #e5e5ea;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141416;
+        --card: #1c1c1e;
+        --text: #f2f2f7;
+        --text-secondary: #98989f;
+        --border: #2c2c2e;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(145deg, #0077FF, #1449D1);
+      padding: 64px 24px 80px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero-icon {
+      width: 100px;
+      height: 100px;
+      border-radius: 22px;
+      margin: 0 auto 20px;
+      display: block;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+    }
+
+    .hero-link {
+      display: inline-flex;
+      text-decoration: none;
+    }
+
+    .hero-title-link,
+    .hero-subtitle-link,
+    .hero-download-link {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .hero-title-link {
+      display: inline-block;
+    }
+
+    .hero-subtitle-link {
+      display: block;
+      font-size: 16px;
+      opacity: 0.85;
+      max-width: 500px;
+      margin: 0 auto 6px;
+    }
+
+    .hero-download-link {
+      display: inline-block;
+      font-size: 13px;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+
+    .hero-title-link:hover,
+    .hero-subtitle-link:hover,
+    .hero-download-link:hover {
+      text-decoration: underline;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      opacity: 0.85;
+      max-width: 500px;
+      margin: 0 auto 20px;
+    }
+
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--blue);
+      margin-bottom: 10px;
+      padding-left: 4px;
+    }
+
+    /* CARD */
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 32px;
+      border: 1px solid var(--border);
+    }
+
+    /* SUBJECT CARDS */
+    .subject-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .subject-item {
+      background: var(--card);
+      padding: 16px;
+      text-align: center;
+    }
+
+    .subject-dot {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      margin: 0 auto 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .subject-dot.red    { background: #ff3b3020; }
+    .subject-dot.purple { background: #af52de20; }
+    .subject-dot.blue   { background: #0077ff20; }
+
+    .subject-item h3 {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 2px;
+      color: var(--text);
+    }
+
+    .subject-item p {
+      font-size: 11px;
+      color: var(--text-secondary);
+      line-height: 1.3;
+    }
+
+    /* FLOW STEPS */
+    .flow-steps {
+      padding: 4px 0;
+    }
+
+    .flow-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .flow-step:last-child { border-bottom: none; }
+
+    .step-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .flow-step h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .flow-step p {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    /* FEATURES GRID */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .feature-item {
+      background: var(--card);
+      padding: 18px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .feature-icon {
+      font-size: 24px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .feature-item h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+      color: var(--text);
+    }
+
+    .feature-item p {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    /* LIST ITEMS */
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 13px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .list-item:last-child { border-bottom: none; }
+
+    .list-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .list-item h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .list-item p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    /* SETTINGS GROUPS */
+    .settings-group {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .settings-group:last-child { border-bottom: none; }
+
+    .settings-group-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .settings-group ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .settings-group ul li {
+      font-size: 13px;
+      color: var(--text);
+      padding-left: 10px;
+      position: relative;
+    }
+
+    .settings-group ul li::before {
+      content: "·";
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    /* FAQ */
+    .faq-item {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item:last-child { border-bottom: none; }
+
+    .faq-item h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .faq-item p {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    /* CONTACT */
+    .contact-row {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      border-bottom: 1px solid var(--border);
+      gap: 14px;
+      text-decoration: none;
+      color: var(--text);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .contact-row:last-child { border-bottom: none; }
+    .contact-row:hover { background: var(--bg); }
+
+    .contact-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .contact-icon.blue  { background: #0077FF20; }
+    .contact-icon.green { background: #34c75920; }
+
+    .contact-row-text h3 { font-size: 15px; font-weight: 500; }
+    .contact-row-text p  { font-size: 13px; color: var(--text-secondary); }
+    .contact-row .arrow  { margin-left: auto; color: var(--text-secondary); font-size: 14px; }
+
+    /* PRIVACY */
+    .privacy-block {
+      padding: 20px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .privacy-block strong { color: var(--text); }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 500px) {
+      .features-grid { grid-template-columns: 1fr; }
+      .subject-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <a
+      class="hero-link"
+      href="https://apps.apple.com/tr/app/konu%C5%9Fma-s%C4%B1nav%C4%B1/id6759739162?l=tr"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Konuşma Sınavı uygulamasını App Store'da aç"
+    >
+      <img class="hero-icon" src="icon.png" alt="Konuşma Sınavı" />
+    </a>
+    <h1>
+      <a
+        class="hero-title-link"
+        href="https://apps.apple.com/tr/app/konu%C5%9Fma-s%C4%B1nav%C4%B1/id6759739162?l=tr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Konuşma Sınavı
+      </a>
+    </h1>
+    <a
+      class="hero-subtitle-link"
+      href="https://apps.apple.com/tr/app/konu%C5%9Fma-s%C4%B1nav%C4%B1/id6759739162?l=tr"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Türkçe, Edebiyat ve İngilizce için MEB'e uygun konuşma sınavı ölçeği ve değerlendirme uygulaması
+    </a>
+    <a
+      class="hero-download-link"
+      href="https://apps.apple.com/tr/app/konu%C5%9Fma-s%C4%B1nav%C4%B1/id6759739162?l=tr"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      (uygulamayı indir)
+    </a>
+    <div class="hero-badges">
+      <span class="badge">Ücretsiz</span>
+      <span class="badge">Reklamsız</span>
+      <span class="badge">iCloud Destekli</span>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- GENEL BİLGİ -->
+    <div class="section-label">Genel Bilgi</div>
+    <div class="card">
+      <div class="privacy-block">
+        <p>
+          Konuşma Sınavı; Türkçe konuşma sınavı, Türk Dili ve Edebiyatı konuşma sınavı
+          ve İngilizce konuşma sınavı değerlendirmelerinde öğretmenlere yardımcı olmak
+          için hazırlanmıştır. Uygulama; konuşma sınavı ölçeği, konuşma sınavı rubriği,
+          ölçüt bazlı puanlama, Not Listesi, PDF/Excel çıktıları ve e-Okul'a manuel not
+          girişi sırasında kullanılabilecek kontrol listeleri sunar.
+        </p>
+      </div>
+    </div>
+
+    <!-- DESTEKLENEN DERSLER -->
+    <div class="section-label">Desteklenen Dersler</div>
+    <div class="card">
+      <div class="subject-grid">
+        <div class="subject-item">
+          <div class="subject-dot red">📖</div>
+          <h3>Türkçe</h3>
+          <p>5–8. sınıf<br/>Ortaokul</p>
+        </div>
+        <div class="subject-item">
+          <div class="subject-dot purple">📚</div>
+          <h3>Türk Dili ve Edebiyatı</h3>
+          <p>9–12. sınıf<br/>Lise</p>
+        </div>
+        <div class="subject-item">
+          <div class="subject-dot blue">🌍</div>
+          <h3>İngilizce</h3>
+          <p>5–12. sınıf<br/>Seçmeli dahil</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- KULLANIM AKIŞI -->
+    <div class="section-label">Kullanım Akışı</div>
+    <div class="card">
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="step-num">1</div>
+          <div>
+            <h3>Ders Seçin</h3>
+            <p>Türkçe, Türk Dili ve Edebiyatı veya İngilizce dersini seçin. İngilizce için Seçmeli İngilizce seçeneği de mevcuttur; puanı her iki derse yansıtabilirsiniz.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="step-num">2</div>
+          <div>
+            <h3>Dönem ve Sınav Seçin</h3>
+            <p>1. veya 2. Dönem ile 1. veya 2. Sınavı belirleyin. Eğitim-öğretim yılı otomatik gelir, değiştirebilirsiniz.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="step-num">3</div>
+          <div>
+            <h3>Ölçek Seçin</h3>
+            <p>Hazırlıklı Konuşma, Sunum/Sunu Yapma veya Performans Görevi ölçeklerinden birini seçin. Dilerseniz 30 ölçüt arasından 10 tanesini seçerek Özel Ölçek oluşturun.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="step-num">4</div>
+          <div>
+            <h3>Öğrenci Listesini Hazırlayın</h3>
+            <p>e-Okul'daki not girişi ekranından kopyalayıp yapıştırarak listeyi aktarın veya öğrencileri tek tek ekleyin. Mükerrer kayıtlar otomatik tespit edilir.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="step-num">5</div>
+          <div>
+            <h3>Değerlendirin ve Raporlayın</h3>
+            <p>Her öğrenciyi ölçüt bazında puanlayın. Tamamlandığında Excel, PDF, PNG veya ZIP olarak çıktı alın; Not Listesi ile dönemlik sonuçları ayrıca takip edin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ÖZELLİKLER -->
+    <div class="section-label">Özellikler</div>
+    <div class="card">
+      <div class="features-grid">
+
+        <div class="feature-item">
+          <div class="feature-icon">📋</div>
+          <div>
+            <h3>MEB Uyumlu Ölçekler</h3>
+            <p>Hazırlıklı Konuşma, Sunum/Sunu Yapma, Performans Görevi ve özel ölçek</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🏫</div>
+          <div>
+            <h3>e-Okul Entegrasyonu</h3>
+            <p>Not girişi ekranından kopyalayıp yapıştırarak anında öğrenci listesi oluşturun</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🎲</div>
+          <div>
+            <h3>Rastgele Öğrenci Seçici</h3>
+            <p>Tarafsız değerlendirme için öğrencileri rastgele sıraya koyun</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">✏️</div>
+          <div>
+            <h3>Toplu Not Girişi</h3>
+            <p>Birden fazla öğrencinin notunu hızlıca girin</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">📊</div>
+          <div>
+            <h3>Raporlama</h3>
+            <p>Excel, PDF, PNG veya ZIP formatında sınıf ve grup bazlı çıktı alın</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🧾</div>
+          <div>
+            <h3>Not Listesi</h3>
+            <p>Dönemlik sınav sonuçlarını bir arada takip edin; PDF ve Excel çıktıları oluşturun</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">☁️</div>
+          <div>
+            <h3>iCloud Senkronizasyonu</h3>
+            <p>Uygun ayarlar açıkken verilerinizi aynı Apple Kimliği ile kullandığınız cihazlar arasında senkronize edin</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">📲</div>
+          <div>
+            <h3>Cihaza Aktar</h3>
+            <p>Şifreli yedeği AirDrop veya paylaşım seçenekleriyle başka bir cihaza aktarın</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">✅</div>
+          <div>
+            <h3>Konu Tekrarını Önleme</h3>
+            <p>Kullanılan konuşma konularını takip ederek aynı dönem içinde tekrarları azaltın</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">📈</div>
+          <div>
+            <h3>İstatistikler</h3>
+            <p>Puan dağılımı, dönem trendi ve ölçüt bazlı karşılaştırma grafikleri</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🗂️</div>
+          <div>
+            <h3>Devamsızlık Takibi</h3>
+            <p>Sınava girmeyen ve sürekli devamsız öğrencileri tespit edin; "G" olarak işaretleyin</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">💾</div>
+          <div>
+            <h3>Taslak Kayıt</h3>
+            <p>Yarım kalan değerlendirmeler otomatik olarak taslak olarak kaydedilir</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🔒</div>
+          <div>
+            <h3>Uygulama Kilidi</h3>
+            <p>Yüz Tanıma, Parmak İzi veya şifre ile erişim koruması</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🎨</div>
+          <div>
+            <h3>Görünüm Özelleştirme</h3>
+            <p>Açık/koyu mod ve 6 farklı tema rengi seçeneği</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- KONUŞMA SINAVI KONULARI -->
+    <div class="section-label">Konuşma Sınavı Konuları</div>
+    <div class="card">
+
+      <div class="list-item">
+        <div class="list-icon">📂</div>
+        <div>
+          <h3>4 Konu Kategorisi</h3>
+          <p>Hazırlıklı Konuşma, Sunuya Dayalı Konuşma, Performansa Dayalı Konuşma ve Özel Konu kategorilerinde genişletilmiş hazır konu listeleri mevcuttur. Her ders için ayrı içerik sunulmaktadır.</p>
+        </div>
+      </div>
+
+      <div class="list-item">
+        <div class="list-icon">🔍</div>
+        <div>
+          <h3>Arama ve Filtreleme</h3>
+          <p>Türkçe karakter desteğiyle konular arasında tam metin arama yapabilirsiniz. Arama sırasında ilgili gruplar otomatik açılır.</p>
+        </div>
+      </div>
+
+      <div class="list-item">
+        <div class="list-icon">🎯</div>
+        <div>
+          <h3>Rastgele Konu Seçimi</h3>
+          <p>10, 20, 25, 30, 40, 50 veya 75 konu arasından rastgele seçim yapabilirsiniz. Tek tıkla tümünü seçme veya temizleme seçeneği de mevcuttur.</p>
+        </div>
+      </div>
+
+      <div class="list-item">
+        <div class="list-icon">📄</div>
+        <div>
+          <h3>PDF Dışa Aktarma</h3>
+          <p>Seçilen konuları; öğretmen adı, okul adı, eğitim-öğretim yılı, dönem, sınav numarası ve konuşma süresi bilgileriyle birlikte PDF olarak oluşturun ve paylaşın.</p>
+        </div>
+      </div>
+
+      <div class="list-item">
+        <div class="list-icon">📋</div>
+        <div>
+          <h3>Panoya Kopyalama</h3>
+          <p>Seçilen konuları numaralı liste olarak panoya kopyalayın. İstediğiniz platforma kolayca yapıştırabilirsiniz.</p>
+        </div>
+      </div>
+
+      <div class="list-item">
+        <div class="list-icon">⚙️</div>
+        <div>
+          <h3>Özel Ölçek Oluşturma</h3>
+          <p>30 ölçüt arasından tam 10 tanesini seçerek kendinize ait değerlendirme ölçeği oluşturun. Seçim sırası takip edilir ve numaralandırılır.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- AYARLAR -->
+    <div class="section-label">Ayarlar</div>
+    <div class="card">
+
+      <div class="settings-group">
+        <div class="settings-group-title">Öğretmen Bilgileri</div>
+        <ul>
+          <li>Öğretmen adı ve okul adı (PDF, Excel, PNG ve ZIP çıktılarında görünür)</li>
+        </ul>
+      </div>
+
+      <div class="settings-group">
+        <div class="settings-group-title">Süre Ayarları</div>
+        <ul>
+          <li>Süre uyarısı etkinleştirme</li>
+          <li>Minimum ve maksimum konuşma süresi (30–600 saniye arasında ayarlanabilir)</li>
+        </ul>
+      </div>
+
+      <div class="settings-group">
+        <div class="settings-group-title">Puanlama Deneyimi</div>
+        <ul>
+          <li>Titreşim (haptic) geri bildirimi</li>
+          <li>Ölçüt puanlandığında otomatik sonrakine geçiş</li>
+        </ul>
+      </div>
+
+      <div class="settings-group">
+        <div class="settings-group-title">Görünüm</div>
+        <ul>
+          <li>Açık mod, koyu mod veya sistem teması</li>
+          <li>6 farklı tema rengi (Mavi, Yeşil, Mor, Turuncu, Kırmızı, Siyah)</li>
+        </ul>
+      </div>
+
+      <div class="settings-group">
+        <div class="settings-group-title">Güvenlik</div>
+        <ul>
+          <li>Yüz Tanıma / Parmak İzi / Şifre ile uygulama kilidi</li>
+          <li>Uygulama açılışında kimlik doğrulama</li>
+        </ul>
+      </div>
+
+      <div class="settings-group">
+        <div class="settings-group-title">iCloud</div>
+        <ul>
+          <li>iCloud senkronizasyonunu açma veya kapatma</li>
+          <li>Öğrenci listeleri, değerlendirmeler, kullanılan konu kayıtları ve ses kayıtlarını cihazlar arasında senkronize etme</li>
+        </ul>
+      </div>
+
+      <div class="settings-group">
+        <div class="settings-group-title">Veri Yönetimi</div>
+        <ul>
+          <li>AES-GCM 256-bit şifreli JSON formatında yedek alma</li>
+          <li>Yedekten geri yükleme (maksimum 20 MB)</li>
+          <li>Cihaza Aktar ile şifreli yedeği AirDrop veya paylaşım seçenekleriyle gönderme</li>
+          <li>Önbellek temizleme</li>
+          <li>Değerlendirme kayıtları, sınıf listeleri veya tüm veriler için ayrı silme seçenekleri</li>
+          <li>Silme işlemleri için 5 saniyelik geri alma (undo) özelliği</li>
+        </ul>
+      </div>
+
+      <div class="settings-group">
+        <div class="settings-group-title">Depolama</div>
+        <ul>
+          <li>Ses kayıtlarının sayısı ve toplam boyutu</li>
+          <li>Ses kayıtlarını toplu silme (değerlendirme verileri korunur)</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- SSS -->
+    <div class="section-label">Sık Sorulan Sorular</div>
+    <div class="card">
+
+      <div class="faq-item">
+        <h3>Uygulama ücretli mi?</h3>
+        <p>Hayır. Tamamen ücretsizdir ve hiçbir reklam içermez.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>İnternet bağlantısı gerekiyor mu?</h3>
+        <p>Temel değerlendirme, kayıt, raporlama ve dışa aktarma işlemleri çevrimdışı kullanılabilir. iCloud senkronizasyonu, App Store değerlendirme isteği ve uygulama içi geri bildirim gibi çevrimiçi özellikler için internet bağlantısı gerekir.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Hangi dersler destekleniyor?</h3>
+        <p>Türkçe (5–8. sınıf), Türk Dili ve Edebiyatı (9–12. sınıf) ve İngilizce (5–12. sınıf, Seçmeli İngilizce dahil) desteklenmektedir.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Öğrenci listesini nasıl aktarabilirim?</h3>
+        <p>e-Okul'daki not girişi ekranından öğrenci listesini kopyalayıp uygulamaya yapıştırabilirsiniz. Mükerrer kayıtlar otomatik olarak tespit edilir.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>G statüsü ne anlama geliyor?</h3>
+        <p>Sınava girmeyen veya sürekli devamsız öğrenciler için kullanılır. Bu öğrencilerin puanı yerine "G" (Girmedi) ibaresi görüntülenir ve raporlara yansır.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Seçmeli İngilizce için ayrı kayıt gerekiyor mu?</h3>
+        <p>Hayır. "İngilizce'yi Seçmeli İngilizce'ye Yansıt" seçeneğiyle aynı sınav puanı her iki derse otomatik olarak işlenir.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Verilerimi yedekleyebilir miyim?</h3>
+        <p>Evet. Ayarlar → Yedek Al bölümünden tüm verilerinizi AES-GCM 256-bit şifreli JSON formatında yedekleyip geri yükleyebilirsiniz. Ayrıca Cihaza Aktar seçeneğiyle şifreli yedeği AirDrop veya paylaşım seçenekleriyle başka bir cihaza gönderebilirsiniz.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>iCloud senkronizasyonu ne işe yarar?</h3>
+        <p>iCloud senkronizasyonu açıkken desteklenen uygulama verileri ve ses kayıtları aynı Apple Kimliği ile kullanılan cihazlar arasında Apple iCloud altyapısı üzerinden senkronize edilebilir. Bu ayarı Ayarlar bölümünden açıp kapatabilirsiniz.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Not Listesi nedir?</h3>
+        <p>Not Listesi, dönem içindeki sınav sonuçlarını bir arada görmenizi ve gerektiğinde PDF veya Excel çıktısı almanızı sağlar.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Özel ölçek nasıl oluşturulur?</h3>
+        <p>Ölçek seçimi ekranında "Özel Ölçek" seçeneğini tıklayın. 30 ölçüt arasından tam 10 tanesini seçerek kendi değerlendirme ölçeğinizi oluşturabilirsiniz.</p>
+      </div>
+
+    </div>
+
+    <!-- İLETİŞİM -->
+    <div class="section-label">İletişim</div>
+    <div class="card">
+
+      <div class="contact-row" onclick="revealEmail(this)">
+        <div class="contact-icon blue">✉️</div>
+        <div class="contact-row-text">
+          <h3>E-posta Gönder</h3>
+          <p id="email-hint">Görmek için tıklayın</p>
+        </div>
+        <span class="arrow">›</span>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-icon green">📱</div>
+        <div class="contact-row-text">
+          <h3>Uygulama İçi Geri Bildirim</h3>
+          <p>Ayarlar → İletişim & Geri Bildirim</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- GİZLİLİK -->
+    <div class="section-label">Gizlilik</div>
+    <div class="card">
+      <div class="privacy-block">
+        <p>
+          Tüm öğrenci bilgileri, sınıf listeleri ve değerlendirme sonuçları
+          cihazınızda saklanır. iCloud senkronizasyonu açıksa desteklenen veriler
+          aynı Apple Kimliği ile kullandığınız cihazlar arasında Apple iCloud altyapısı
+          üzerinden senkronize edilebilir. Geliştiriciye ait ayrı bir sunucuya otomatik
+          veri aktarımı yapılmaz. Yedekler <strong>AES-GCM 256-bit</strong> ile şifrelenmiş JSON
+          formatında üretilir; şifreleme anahtarı yalnızca cihazınızın Güvenli Anahtar Zinciri'nde
+          (Keychain) saklanır. iCloud Keychain açıksa anahtar Apple cihazlarınız arasında
+          senkronize olabilir. Geri bildirim formu dışında geliştiriciye veri gönderimi yapılmaz.
+        </p>
+        <br />
+        <p>Son güncelleme: Mayıs 2026</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 Cemal Dalgalı · Konuşma Sınavı v1.1.0
+  </footer>
+
+  <script>
+    function revealEmail(row) {
+      const parts = ['dalgali', 'cemal', '@', 'gmail', '.', 'com'];
+      const email = parts.join('');
+      document.getElementById('email-hint').textContent = email;
+      row.onclick = function() { window.location.href = 'mailto:' + email; };
+    }
+  </script>
+
+</body>
+</html>
